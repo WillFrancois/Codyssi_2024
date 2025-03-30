@@ -40,10 +40,9 @@ func main() {
 	result := ""
 
 	for out > 0 {
-		result += string(mapping[out%65])
+		result = string(mapping[out%65]) + result
 		out /= 65
 	}
 
-	// Result is backwards
 	fmt.Println(result)
 }
